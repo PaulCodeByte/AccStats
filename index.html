@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */ 
+        body, html{ font-family: 'Inter', Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 0 0;padding: 0;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+    
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            padding: 10vh 10%;
+            justify-content: space-around;
+        }
+
+        button{
+            text-decoration: none;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 5px 9px;
+            font-size: 1.2rem;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="{{ url_for('show') }}" method="post">
+        <textarea name="data" id="data" style="resize: none; width: 100%; height: 80%; margin: 0;" required placeholder="Il tuo JSON qui"></textarea>
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
